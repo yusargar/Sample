@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.9.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:LogicalDataModel="http:///com/ibm/db/models/logical/logical.ecore">
+  <LogicalDataModel:Package xmi:id="_ng_HIAzdEeir9ve8_i5aVQ" name="Package1" targetNamespace="CISFSTG.ldm" contents="_nigKEAzdEeir9ve8_i5aVQ _nigKHQzdEeir9ve8_i5aVQ _nigxIAzdEeir9ve8_i5aVQ _nigxPQzdEeir9ve8_i5aVQ _nih_QAzdEeir9ve8_i5aVQ _nih_SwzdEeir9ve8_i5aVQ _niimUAzdEeir9ve8_i5aVQ _niimZwzdEeir9ve8_i5aVQ _niimdQzdEeir9ve8_i5aVQ _nijNYAzdEeir9ve8_i5aVQ _nij0cAzdEeir9ve8_i5aVQ _nij0fwzdEeir9ve8_i5aVQ _nikbgAzdEeir9ve8_i5aVQ _nikblAzdEeir9ve8_i5aVQ _nilCkAzdEeir9ve8_i5aVQ"/>
+  <LogicalDataModel:Entity xmi:id="_nigKEAzdEeir9ve8_i5aVQ" name="CLIENT DISTRIBUTION BRIDGE XREF" description="" label="Client" abbreviation="CLIENT_DISTRIBUTION_BRIDGE_XREF" package="_ng_HIAzdEeir9ve8_i5aVQ">
+    <attributes xmi:id="_nigKEQzdEeir9ve8_i5aVQ" name="PRTY KEY" description="This represents the SITE_KEY or the ORG_KEY depending on the table be  ing joined" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nigKEgzdEeir9ve8_i5aVQ" name="PRTY TYPE CD" description="" label="" dataType="NCHAR(4)" required="true"/>
+    <attributes xmi:id="_nigKEwzdEeir9ve8_i5aVQ" name="DOM CLNT KEY" description="For each unique Client Site, a unique system key is generated for the  record" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nigKFAzdEeir9ve8_i5aVQ" name="DOM BUY GROUP KEY" description="For each unique Client Site, a unique system key is generated for the  record" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nigKFQzdEeir9ve8_i5aVQ" name="SUB CLNT KEY" description="For each unique Client Site, a unique system key is generated for the  record" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nigKFgzdEeir9ve8_i5aVQ" name="ROW RCVD DT" description="From the SITE or ORG (ETL Tables) the date that it was loaded into st  aging" label="" dataType="DATE" required="true"/>
+    <attributes xmi:id="_nigKFwzdEeir9ve8_i5aVQ" name="CISF LD TMS" description="The system load timestamp in CISF" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_nigKGAzdEeir9ve8_i5aVQ" name="SIW LD TMS" description="The system timestamp when the row was loaded in SIW" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_nigKGQzdEeir9ve8_i5aVQ" name="INSTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nigKGgzdEeir9ve8_i5aVQ" name="UPDTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nigKGwzdEeir9ve8_i5aVQ" name="ROW STAT CD" description="" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <keys xsi:type="LogicalDataModel:AlternateKey" xmi:id="_nigKHAzdEeir9ve8_i5aVQ" name="CLIENT DISTRIBUTION BRIDGE XREF_AK" description="" attributes="_nigKEQzdEeir9ve8_i5aVQ _nigKEgzdEeir9ve8_i5aVQ _nigKEwzdEeir9ve8_i5aVQ _nigKFAzdEeir9ve8_i5aVQ" physicalOption="UNIQUE_INDEX"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_nigKHQzdEeir9ve8_i5aVQ" name="CMR INDUSTRY SOLUTION UNIT" description="The CMR_ISU (CMR ÝCustomer Master Record¨ Indu                         stry Solution Unit) table maintains the Industry Solution Unit          data for the CMR.  The source of the table is the                       CUST.SAP_DIM_CMR_ISU table in CISF.  This table provides Sectors and    ISUs of the Industry." label="Client" abbreviation="CMR_INDUSTRY_SOLUTION_UNIT" package="_ng_HIAzdEeir9ve8_i5aVQ">
+    <attributes xmi:id="_nigKHgzdEeir9ve8_i5aVQ" name="CMR ISU KEY" description="SAP Dimension CMR Industry Solution Unit Key.  For each unique SAP CU  STOMER Dimension, a unique system key is generated for the record" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nigKHwzdEeir9ve8_i5aVQ" name="CMR ISU CD" description="The ISU code assigned to the CMR" label="" dataType="NCHAR(2)" required="true"/>
+    <attributes xmi:id="_nigKIAzdEeir9ve8_i5aVQ" name="CMR ISU NM" description="The ISU Code name" label="" dataType="NVARCHAR(20)" defaultValue="NULL"/>
+    <attributes xmi:id="_nigKIQzdEeir9ve8_i5aVQ" name="CMR SCTR CD" description="The Sector code for the ISU" label="" dataType="NCHAR(4)" defaultValue="NULL"/>
+    <attributes xmi:id="_nigKIgzdEeir9ve8_i5aVQ" name="CMR SCTR NM" description="The Sector description" label="" dataType="NVARCHAR(35)" defaultValue="NULL"/>
+    <attributes xmi:id="_nigKIwzdEeir9ve8_i5aVQ" name="CISF LD TMS" description="The system timestamp when the row was loaded in CISF" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_nigKJAzdEeir9ve8_i5aVQ" name="SIW LD TMS" description="The system timestamp when the row was loaded in SIW" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_nigKJQzdEeir9ve8_i5aVQ" name="INSTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nigKJgzdEeir9ve8_i5aVQ" name="UPDTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nigKJwzdEeir9ve8_i5aVQ" name="ROW STAT CD" description="" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_nigKKAzdEeir9ve8_i5aVQ" name="CMR INDUSTRY SOLUTION UNIT_PK" attributes="_nigKHgzdEeir9ve8_i5aVQ"/>
+    <keys xsi:type="LogicalDataModel:AlternateKey" xmi:id="_nigKKQzdEeir9ve8_i5aVQ" name="CMR INDUSTRY SOLUTION UNIT_AK" description="" attributes="_nigKHgzdEeir9ve8_i5aVQ" physicalOption="UNIQUE_INDEX"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_nigxIAzdEeir9ve8_i5aVQ" name="COVERAGE" description="The COVERAG (Coverage) table contains the information a                bout coverages assigned to a customer.   The table is sourced from      the CUST.SAP_DIM_COVERAGE table in CISF." label="Client" abbreviation="COVERAGE" package="_ng_HIAzdEeir9ve8_i5aVQ">
+    <attributes xmi:id="_nigxIQzdEeir9ve8_i5aVQ" name="COVERAG KEY" description="" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nigxIgzdEeir9ve8_i5aVQ" name="COVERAG TYPE ID" description="This is the concatenation of the coverage type and coverage id provid  ing an 8 digit unique identifier" label="" dataType="NCHAR(8)" required="true"/>
+    <attributes xmi:id="_nigxIwzdEeir9ve8_i5aVQ" name="COVERAG TYPE CD" description="The single letter representing the type of coverage" label="" dataType="NCHAR(1)" required="true"/>
+    <attributes xmi:id="_nigxJAzdEeir9ve8_i5aVQ" name="COVERAG ID" description="The 7 position value representing the coverage id" label="" dataType="NCHAR(7)" required="true"/>
+    <attributes xmi:id="_nigxJQzdEeir9ve8_i5aVQ" name="COVERAG NM" description="The name of the coverage type / id" label="" dataType="NVARCHAR(35)" defaultValue="NULL"/>
+    <attributes xmi:id="_nigxJgzdEeir9ve8_i5aVQ" name="SUB BRNCH ID" description="If a sub branch has been assigned, it is found in this field" label="" dataType="NCHAR(4)" defaultValue="NULL"/>
+    <attributes xmi:id="_nigxJwzdEeir9ve8_i5aVQ" name="SUB BRNCH NM" description="The name of the sub branch, if assigned" label="" dataType="NVARCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nigxKAzdEeir9ve8_i5aVQ" name="BRNCH ID" description="The branch assigned to this coverage id" label="" dataType="NCHAR(4)" defaultValue="NULL"/>
+    <attributes xmi:id="_nigxKQzdEeir9ve8_i5aVQ" name="BRNCH NM" description="The name of the branch" label="" dataType="NVARCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nigxKgzdEeir9ve8_i5aVQ" name="SALES GROUP CD" description="The sales group assigned to this coverage id" label="" dataType="NCHAR(2)" defaultValue="NULL"/>
+    <attributes xmi:id="_nigxKwzdEeir9ve8_i5aVQ" name="SALES GROUP NM" description="The sales group name for this coverage id" label="" dataType="NVARCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nigxLAzdEeir9ve8_i5aVQ" name="RPRT TO IMT CD" description="The report to IMT for this coverage id" label="" dataType="NCHAR(2)" defaultValue="NULL"/>
+    <attributes xmi:id="_nigxLQzdEeir9ve8_i5aVQ" name="RPRT TO IMT NM" description="The report to IMT name for this coverage id" label="" dataType="NVARCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nigxLgzdEeir9ve8_i5aVQ" name="RPRT SCTR CD" description="The report sector code for this coverage id" label="" dataType="NCHAR(4)" defaultValue="NULL"/>
+    <attributes xmi:id="_nigxLwzdEeir9ve8_i5aVQ" name="RPRT SCTR NM" description="The name of the report to sector" label="" dataType="NVARCHAR(35)" defaultValue="NULL"/>
+    <attributes xmi:id="_nigxMAzdEeir9ve8_i5aVQ" name="IOT CD" description="The IOT code for this coverage id" label="" dataType="NCHAR(2)" defaultValue="NULL"/>
+    <attributes xmi:id="_nigxMQzdEeir9ve8_i5aVQ" name="IOT NM" description="The IOT name for this coverage id" label="" dataType="NVARCHAR(20)" defaultValue="NULL"/>
+    <attributes xmi:id="_nigxMgzdEeir9ve8_i5aVQ" name="MNGG CTRY CD" description="For Integrated accounts only, the three position numeric value identi  fying the managing country" label="" dataType="NCHAR(3)" defaultValue="NULL"/>
+    <attributes xmi:id="_nigxMwzdEeir9ve8_i5aVQ" name="EXCTV NM" description="The executive name assigned to this level of the coverage" label="" dataType="NVARCHAR(35)" defaultValue="NULL"/>
+    <attributes xmi:id="_nigxNAzdEeir9ve8_i5aVQ" name="EXCTV INTERNT ID" description="The executive internet id for the executive assigned to this coverage  " label="" dataType="NVARCHAR(40)" defaultValue="NULL"/>
+    <attributes xmi:id="_nigxNQzdEeir9ve8_i5aVQ" name="ACTV STAT IND" description="The active status indicator.  Indicates whether coverage is active or  not." label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <attributes xmi:id="_nigxNgzdEeir9ve8_i5aVQ" name="CISF LD TMS" description="The system timestamp when the row was loaded in CISF" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_nigxNwzdEeir9ve8_i5aVQ" name="SIW LD TMS" description="The system timestamp when the row was loaded in SIW" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_nigxOAzdEeir9ve8_i5aVQ" name="INSTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nigxOQzdEeir9ve8_i5aVQ" name="UPDTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nigxOgzdEeir9ve8_i5aVQ" name="ROW STAT CD" description="" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_nigxOwzdEeir9ve8_i5aVQ" name="COVERAGE_PK" attributes="_nigxIQzdEeir9ve8_i5aVQ"/>
+    <keys xsi:type="LogicalDataModel:AlternateKey" xmi:id="_nigxPAzdEeir9ve8_i5aVQ" name="COVERAGE_AK" description="" attributes="_nigxIQzdEeir9ve8_i5aVQ" physicalOption="UNIQUE_INDEX"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_nigxPQzdEeir9ve8_i5aVQ" name="CUSTOMER" description="The CUST (Customer) table provisions customer data.  So                urce from the CUST.SAP_CUSTOMER table in CISF." label="Client" abbreviation="CUSTOMER" package="_ng_HIAzdEeir9ve8_i5aVQ">
+    <attributes xmi:id="_nigxPgzdEeir9ve8_i5aVQ" name="CUST KEY" description="For each unique SAP CUSTOMER number, a unique system key is generated  for the record" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nigxPwzdEeir9ve8_i5aVQ" name="CURR COVERAG KEY" description="The SAP Dimension Current Coverage Key.  Each dimension has a unique   key that joins it to the SAP CUSTOMER table.  If the dimension is not   assigned a value, then the record points to &lt;0> or &lt;Unassigned>." label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nigxQAzdEeir9ve8_i5aVQ" name="BASE COVERAG KEY" description="SAP Dimension Base Coverage Key" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nihYMAzdEeir9ve8_i5aVQ" name="SIC CD KEY" description="SAP Dimension Standard Industry Classification Code Key" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nihYMQzdEeir9ve8_i5aVQ" name="CMR ISU KEY" description="SAP Dimension Customer Master Record Industry Solution Unit Key" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nihYMgzdEeir9ve8_i5aVQ" name="ISO CTRY KEY" description="SAP Dimension International Organization for Standardization Country   Key" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nihYMwzdEeir9ve8_i5aVQ" name="INTL ACCT KEY" description="SAP Dimension International Account Key" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nihYNAzdEeir9ve8_i5aVQ" name="TERR KEY" description="SAP Dimension Territory Key" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nihYNQzdEeir9ve8_i5aVQ" name="SAP CUST NUM" description="The unique 10 digit number that is assigned uniquely to each CMR." label="" dataType="NCHAR(10)" required="true"/>
+    <attributes xmi:id="_nihYNgzdEeir9ve8_i5aVQ" name="RCRD LAST UPDTD DT" description="When the record was last updated in CISF." label="" dataType="DATE" required="true"/>
+    <attributes xmi:id="_nihYNwzdEeir9ve8_i5aVQ" name="DLGTD COVERAG IND" description="If âYâ then it indicates that this SAP CUSTOMER number has been delated" label="" dataType="NCHAR(1)" required="true"/>
+    <attributes xmi:id="_nihYOAzdEeir9ve8_i5aVQ" name="CUST NM" description="The name of the customer" label="" dataType="NVARCHAR(70)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYOQzdEeir9ve8_i5aVQ" name="CUST2 NM" description="The name field 2 for this customer" label="" dataType="NVARCHAR(70)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYOgzdEeir9ve8_i5aVQ" name="CUST3 NM" description="The name field 3 for this customer" label="" dataType="NVARCHAR(70)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYOwzdEeir9ve8_i5aVQ" name="ISSUEG CTRY NUM" description="The 3 digit number that is assigned from the CMR system that has crea  ted the CMR number" label="" dataType="NCHAR(3)" required="true"/>
+    <attributes xmi:id="_nihYPAzdEeir9ve8_i5aVQ" name="ST ADDR TXT" description="Street address for this customer" label="" dataType="NVARCHAR(80)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYPQzdEeir9ve8_i5aVQ" name="CUST CITY TXT" description="City for this customer" label="" dataType="NVARCHAR(70)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYPgzdEeir9ve8_i5aVQ" name="CUST STATE PRVNC TXT" description="State or Province code for the customer" label="" dataType="NCHAR(3)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYPwzdEeir9ve8_i5aVQ" name="CUST POSTL CD" description="Postal Code for this customer" label="" dataType="NVARCHAR(10)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYQAzdEeir9ve8_i5aVQ" name="LGCY CUST NUM" description="Legacy 6 or 7 digit CMR number" label="" dataType="NCHAR(8)" required="true"/>
+    <attributes xmi:id="_nihYQQzdEeir9ve8_i5aVQ" name="ENTPRS NUM" description="Enterprise number for this customer" label="" dataType="NCHAR(15)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYQgzdEeir9ve8_i5aVQ" name="CMPNY NUM" description="Company number for this customer" label="" dataType="NCHAR(15)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYQwzdEeir9ve8_i5aVQ" name="MRKT AFFLT NUM" description="Marketing Affiliate number for this customer" label="" dataType="NCHAR(8)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYRAzdEeir9ve8_i5aVQ" name="QUAD TIER CD" description="" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYRQzdEeir9ve8_i5aVQ" name="CUST CLASS CD" description="The internal RDC code that classifies the type of customer" label="" dataType="NCHAR(2)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYRgzdEeir9ve8_i5aVQ" name="CUST CLASS DESC" description="The description of the internal RDC code for the type of CMR record" label="" dataType="NVARCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYRwzdEeir9ve8_i5aVQ" name="CUST ACCT GROUP TYPE CD" description="The internal RDC code for this customer that tells the type of CMR re  cord.  Installed at, sold to, etc" label="" dataType="NCHAR(4)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYSAzdEeir9ve8_i5aVQ" name="CUST ACCT GROUP TYPE DESC" description="The description of the internal RDC code for the type of CMR record" label="" dataType="NVARCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYSQzdEeir9ve8_i5aVQ" name="CUST SRCH TXT" description="The Customer Search text is sourced from the SORTL information from R  DC.  The SORTL field is used as a Quick Search Term for the Customer    in the Customer Search Help.   (SORTL is an SAP technical field name    that stores search text)." label="" dataType="NVARCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYSgzdEeir9ve8_i5aVQ" name="CUST SPPRT ID" description="Carries a code value if this record has been identified as a PCD or j  oint venture record" label="" dataType="NCHAR(3)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYSwzdEeir9ve8_i5aVQ" name="TAX1 ID" description="The data for TAX ID 1" label="" dataType="NVARCHAR(16)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYTAzdEeir9ve8_i5aVQ" name="TAX2 ID" description="The data for TAX ID 2" label="" dataType="NVARCHAR(11)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYTQzdEeir9ve8_i5aVQ" name="TAX3 ID" description="The data for TAX ID 3" label="" dataType="NVARCHAR(20)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYTgzdEeir9ve8_i5aVQ" name="CUST ORDER BLOCK CD" description="The internal RDC code that describes why a customer is âorder blockedâ" label="" dataType="NCHAR(2)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYTwzdEeir9ve8_i5aVQ" name="CUST ORDER BLOCK DESC" description="The description of the RDC code" label="" dataType="NVARCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYUAzdEeir9ve8_i5aVQ" name="CUST CNTY CD" description="The county for this customer" label="" dataType="NCHAR(3)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYUQzdEeir9ve8_i5aVQ" name="SCRTY CLASS CD" description="A security classification for federal records only.  REG, SEN or MAS.  " label="" dataType="NCHAR(4)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYUgzdEeir9ve8_i5aVQ" name="BUS PRTNR SITE PRTY ID" description="Site Party ID of the Business Partner proxy customer record. Populate  d with the Site_Party_ID of the related CLIENT.SITE record.  This       field will only be populated for Business Partner records (where the    RDc KNA1.BRAN5 like 'BP%', else empty)." label="" dataType="NCHAR(10)" required="true"/>
+    <attributes xmi:id="_nihYUwzdEeir9ve8_i5aVQ" name="LGCY CRET DT" description="The date of the RDc record creation.    Source: SAPR3.KNA1.ERDAT." label="" dataType="DATE" required="true"/>
+    <attributes xmi:id="_nihYVAzdEeir9ve8_i5aVQ" name="ALTRNT LGCY CUST NUM" description="The Alternate Legacy Customer Number recasts the Legacy customer numb  er with leading zeroes as this leading zero format is expected for      certain reports." label="" dataType="NCHAR(8)" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYVQzdEeir9ve8_i5aVQ" name="CISF LD TMS" description="The system load timestamp in CISF" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYVgzdEeir9ve8_i5aVQ" name="SIW LD TMS" description="The system timestamp when the row was loaded in SIW" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_nihYVwzdEeir9ve8_i5aVQ" name="INSTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYWAzdEeir9ve8_i5aVQ" name="UPDTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nihYWQzdEeir9ve8_i5aVQ" name="ROW STAT CD" description="" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_nihYWgzdEeir9ve8_i5aVQ" name="CUSTOMER_PK" attributes="_nigxPgzdEeir9ve8_i5aVQ"/>
+    <keys xsi:type="LogicalDataModel:AlternateKey" xmi:id="_nihYWwzdEeir9ve8_i5aVQ" name="CUSTOMER_AK" description="" attributes="_nigxPgzdEeir9ve8_i5aVQ" physicalOption="UNIQUE_INDEX"/>
+    <inversionEntries xmi:id="_nihYXAzdEeir9ve8_i5aVQ" name="INVERSIONENTRY1" description="" physicalOption="INDEX">
+      <members xmi:id="_nihYXQzdEeir9ve8_i5aVQ" attribute="_nihYQAzdEeir9ve8_i5aVQ"/>
+      <members xmi:id="_nihYXgzdEeir9ve8_i5aVQ" attribute="_nihYOwzdEeir9ve8_i5aVQ"/>
+    </inversionEntries>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_nih_QAzdEeir9ve8_i5aVQ" name="CUSTOMER TO SITE XREF" description="" label="Client" abbreviation="CUSTOMER_TO_SITE_XREF" package="_ng_HIAzdEeir9ve8_i5aVQ">
+    <attributes xmi:id="_nih_QQzdEeir9ve8_i5aVQ" name="CUST KEY" description="" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nih_QgzdEeir9ve8_i5aVQ" name="SITE KEY" description="" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nih_QwzdEeir9ve8_i5aVQ" name="PRTY TYPE CD" description="" label="" dataType="NCHAR(4)" required="true"/>
+    <attributes xmi:id="_nih_RAzdEeir9ve8_i5aVQ" name="CISF LD TMS" description="The system load timestamp in CISF" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_nih_RQzdEeir9ve8_i5aVQ" name="SIW LD TMS" description="The system timestamp when the row was loaded in SIW" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_nih_RgzdEeir9ve8_i5aVQ" name="INSTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nih_RwzdEeir9ve8_i5aVQ" name="UPDTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nih_SAzdEeir9ve8_i5aVQ" name="ROW STAT CD" description="" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_nih_SQzdEeir9ve8_i5aVQ" name="CUSTOMER TO SITE XREF_PK" attributes="_nih_QQzdEeir9ve8_i5aVQ"/>
+    <keys xsi:type="LogicalDataModel:AlternateKey" xmi:id="_nih_SgzdEeir9ve8_i5aVQ" name="CUSTOMER TO SITE XREF_AK" description="" attributes="_nih_QQzdEeir9ve8_i5aVQ" physicalOption="UNIQUE_INDEX"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_nih_SwzdEeir9ve8_i5aVQ" name="DOMESTIC BUY GROUP" description="" label="Client" abbreviation="DOMESTIC_BUY_GROUP" package="_ng_HIAzdEeir9ve8_i5aVQ">
+    <attributes xmi:id="_nih_TAzdEeir9ve8_i5aVQ" name="DOM BUY GROUP KEY" description="For each unique Dom Buy Grp, a unique system key is generated for the  record" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nih_TQzdEeir9ve8_i5aVQ" name="GLBL BUY GROUP KEY" description="For each unique Gbl Buy Grp, a unique system key is generated for the  record.  Foreign key to GBL BUY GRP Table" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nih_TgzdEeir9ve8_i5aVQ" name="DOM BUY GROUP ID" description="The unique Id assigned by MDM" label="" dataType="NCHAR(8)" required="true"/>
+    <attributes xmi:id="_nih_TwzdEeir9ve8_i5aVQ" name="ROW RCVD DT" description="The date this data was last updated from the staging layer" label="" dataType="DATE" defaultValue="NULL"/>
+    <attributes xmi:id="_nih_UAzdEeir9ve8_i5aVQ" name="DOM BUY GROUP NM" description="The Dom Buy Grp name  assigned in MDM" label="" dataType="NVARCHAR(268)" defaultValue="NULL"/>
+    <attributes xmi:id="_nih_UQzdEeir9ve8_i5aVQ" name="DOM BUY GROUP ALT NM" description="The Dom Buy Grp alternate name assigned in MDM" label="" dataType="NVARCHAR(268)" defaultValue="NULL"/>
+    <attributes xmi:id="_nih_UgzdEeir9ve8_i5aVQ" name="SCRTY CLASS CD" description="The security class for this site â REG, SEN, MAS" label="" dataType="NCHAR(4)" defaultValue="NULL"/>
+    <attributes xmi:id="_nih_UwzdEeir9ve8_i5aVQ" name="INACTV DT" description="Inactive date" label="" dataType="DATE" defaultValue="NULL"/>
+    <attributes xmi:id="_nih_VAzdEeir9ve8_i5aVQ" name="CLNT ASSGNMT IND" description="Indicates if a client is assigned" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <attributes xmi:id="_nih_VQzdEeir9ve8_i5aVQ" name="DOM BUY GROUP INDSTRY CD" description="DOM BUY GRP Industry code based on largest revenue by industry (RELEA  SE 4.1)" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <attributes xmi:id="_nih_VgzdEeir9ve8_i5aVQ" name="PREDOM INDSTRY PCT" description="Predominate Industry percentage expressed in whole number shows the p  ercentage of revenue in the industry  (RELEASE 4.1)" label="" dataType="INTEGER" defaultValue="NULL"/>
+    <attributes xmi:id="_nih_VwzdEeir9ve8_i5aVQ" name="DOM BUY GROUP ISO CTRY CD" description="The two character ISO country code of the domestic buy group." label="" dataType="NCHAR(2)" defaultValue="NULL"/>
+    <attributes xmi:id="_nih_WAzdEeir9ve8_i5aVQ" name="CRET TYPE CD" description="" label="" dataType="NCHAR(10)" required="true"/>
+    <attributes xmi:id="_nih_WQzdEeir9ve8_i5aVQ" name="CLNT ACTV IND" description="" label="" dataType="NCHAR(1)" defaultValue="Y" required="true"/>
+    <attributes xmi:id="_nih_WgzdEeir9ve8_i5aVQ" name="CLNT EMPTY IND" description="" label="" dataType="NCHAR(1)" defaultValue="N" required="true"/>
+    <attributes xmi:id="_nih_WwzdEeir9ve8_i5aVQ" name="CISF LD TMS" description="The system load timestamp in CISF" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_nih_XAzdEeir9ve8_i5aVQ" name="SIW LD TMS" description="The system timestamp when the row was loaded in SIW" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_nih_XQzdEeir9ve8_i5aVQ" name="INSTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nih_XgzdEeir9ve8_i5aVQ" name="UPDTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nih_XwzdEeir9ve8_i5aVQ" name="ROW STAT CD" description="" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_nih_YAzdEeir9ve8_i5aVQ" name="DOMESTIC BUY GROUP_PK" attributes="_nih_TAzdEeir9ve8_i5aVQ"/>
+    <keys xsi:type="LogicalDataModel:AlternateKey" xmi:id="_nih_YQzdEeir9ve8_i5aVQ" name="DOMESTIC BUY GROUP_AK" description="" attributes="_nih_TAzdEeir9ve8_i5aVQ" physicalOption="UNIQUE_INDEX"/>
+    <keys xsi:type="LogicalDataModel:AlternateKey" xmi:id="_nih_YgzdEeir9ve8_i5aVQ" name="DOMESTIC BUY GROUP_AK1" description="" attributes="_nih_TQzdEeir9ve8_i5aVQ _nih_TAzdEeir9ve8_i5aVQ" physicalOption="UNIQUE_INDEX"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_niimUAzdEeir9ve8_i5aVQ" name="DOMESTIC CLIENT" description="The DOM_CLIENT table defines the client at a domestic (or nati         onal or country) level.  It defines client names. SUB_CLIENTS           are related to the DOM_CLIENT though the DOM_CLIENT_KEY." label="Client" abbreviation="DOMESTIC_CLIENT" package="_ng_HIAzdEeir9ve8_i5aVQ">
+    <attributes xmi:id="_niimUQzdEeir9ve8_i5aVQ" name="DOM CLNT KEY" description="For each unique Dom Client, a unique system key is generated for the   record" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_niimUgzdEeir9ve8_i5aVQ" name="GLBL CLNT KEY" description="For each unique Gbl Client, a unique system key is generated for the   record" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_niimUwzdEeir9ve8_i5aVQ" name="DOM CLNT ID" description="The unique Id assigned by MDM" label="" dataType="NCHAR(8)" required="true"/>
+    <attributes xmi:id="_niimVAzdEeir9ve8_i5aVQ" name="ROW RCVD DT" description="The date this data was last updated from the staging layer" label="" dataType="DATE" defaultValue="NULL"/>
+    <attributes xmi:id="_niimVQzdEeir9ve8_i5aVQ" name="DOM CLNT NM" description="The Sub Client name assigned in MDM" label="" dataType="NVARCHAR(268)" defaultValue="NULL"/>
+    <attributes xmi:id="_niimVgzdEeir9ve8_i5aVQ" name="DOM CLNT ALT NM" description="The Sub Client alternate name assigned in MDM" label="" dataType="NVARCHAR(268)" defaultValue="NULL"/>
+    <attributes xmi:id="_niimVwzdEeir9ve8_i5aVQ" name="DOM CLNT CTRY CD" description="The country code of the Dom Client" label="" dataType="NCHAR(2)" defaultValue="NULL"/>
+    <attributes xmi:id="_niimWAzdEeir9ve8_i5aVQ" name="SCRTY CLASS CD" description="The security class for this site â REG, SEN, MAS" label="" dataType="NCHAR(4)" defaultValue="NULL"/>
+    <attributes xmi:id="_niimWQzdEeir9ve8_i5aVQ" name="INACTV DT" description="Inactive date" label="" dataType="DATE" defaultValue="NULL"/>
+    <attributes xmi:id="_niimWgzdEeir9ve8_i5aVQ" name="CLNT ASSGNMT IND" description="Indicates if a client is assigned" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <attributes xmi:id="_niimWwzdEeir9ve8_i5aVQ" name="DOM CLNT INDSTRY CD" description="Dom Client Industry code based on largest revenue by industry (RELEAS  E 4.1)" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <attributes xmi:id="_niimXAzdEeir9ve8_i5aVQ" name="PREDOM INDSTRY PCT" description="Predominate Industry percentage expressed in whole number shows the p  ercentage of revenue in the industry (RELEASE 4.1)" label="" dataType="INTEGER" defaultValue="NULL"/>
+    <attributes xmi:id="_niimXQzdEeir9ve8_i5aVQ" name="CRET TYPE CD" description="" label="" dataType="NCHAR(10)" required="true"/>
+    <attributes xmi:id="_niimXgzdEeir9ve8_i5aVQ" name="CLNT ACTV IND" description="" label="" dataType="NCHAR(1)" defaultValue="Y" required="true"/>
+    <attributes xmi:id="_niimXwzdEeir9ve8_i5aVQ" name="CLNT EMPTY IND" description="" label="" dataType="NCHAR(1)" defaultValue="N" required="true"/>
+    <attributes xmi:id="_niimYAzdEeir9ve8_i5aVQ" name="CISF LD TMS" description="The system load timestamp in CISF" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_niimYQzdEeir9ve8_i5aVQ" name="SIW LD TMS" description="The system timestamp when the row was loaded in SIW" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_niimYgzdEeir9ve8_i5aVQ" name="INSTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_niimYwzdEeir9ve8_i5aVQ" name="UPDTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_niimZAzdEeir9ve8_i5aVQ" name="ROW STAT CD" description="" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_niimZQzdEeir9ve8_i5aVQ" name="DOMESTIC CLIENT_PK" attributes="_niimUQzdEeir9ve8_i5aVQ"/>
+    <keys xsi:type="LogicalDataModel:AlternateKey" xmi:id="_niimZgzdEeir9ve8_i5aVQ" name="DOMESTIC CLIENT_AK" description="" attributes="_niimUQzdEeir9ve8_i5aVQ" physicalOption="UNIQUE_INDEX"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_niimZwzdEeir9ve8_i5aVQ" name="DUNS" description="The DUNS (Data Universal Numbering System) table relate                s the nine digit Dun and Bradstreet identifier to the SITE.  It also    maintains Parent, Country, and Global Dun and                           Bradstreet references.  The source is from the CLIENT.DUNS table in     CISF." label="Client" abbreviation="DUNS" package="_ng_HIAzdEeir9ve8_i5aVQ">
+    <attributes xmi:id="_niimaAzdEeir9ve8_i5aVQ" name="DUNS KEY" description="For each unique DUNS NO, a unique system key is generated for the rec  ord" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_niimaQzdEeir9ve8_i5aVQ" name="DUNS NUM" description="The 9 digit DUNS No" label="" dataType="NCHAR(9)" defaultValue="NULL"/>
+    <attributes xmi:id="_niimagzdEeir9ve8_i5aVQ" name="ROW RCVD DT" description="The date the data was received in the CISF staging layer" label="" dataType="DATE" required="true"/>
+    <attributes xmi:id="_niimawzdEeir9ve8_i5aVQ" name="CCMS PRNT DUNS NUM" description="The Parent Duns" label="" dataType="NCHAR(9)" defaultValue="NULL"/>
+    <attributes xmi:id="_niimbAzdEeir9ve8_i5aVQ" name="CCMS DOM ULTMT DUNS NUM" description="The Country level Duns" label="" dataType="NCHAR(9)" defaultValue="NULL"/>
+    <attributes xmi:id="_niimbQzdEeir9ve8_i5aVQ" name="CCMS GLBL ULTMT DUNS NUM" description="The Country level Duns" label="" dataType="NCHAR(9)" defaultValue="NULL"/>
+    <attributes xmi:id="_niimbgzdEeir9ve8_i5aVQ" name="CISF LD TMS" description="The system load timestamp in CISF" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_niimbwzdEeir9ve8_i5aVQ" name="SIW LD TMS" description="The system timestamp when the row was loaded in SIW" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_niimcAzdEeir9ve8_i5aVQ" name="INSTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_niimcQzdEeir9ve8_i5aVQ" name="UPDTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_niimcgzdEeir9ve8_i5aVQ" name="ROW STAT CD" description="" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_niimcwzdEeir9ve8_i5aVQ" name="DUNS_PK" attributes="_niimaAzdEeir9ve8_i5aVQ"/>
+    <keys xsi:type="LogicalDataModel:AlternateKey" xmi:id="_niimdAzdEeir9ve8_i5aVQ" name="DUNS_AK" description="" attributes="_niimaAzdEeir9ve8_i5aVQ" physicalOption="UNIQUE_INDEX"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_niimdQzdEeir9ve8_i5aVQ" name="GLOBAL BUY GROUP" description="" label="Client" abbreviation="GLOBAL_BUY_GROUP" package="_ng_HIAzdEeir9ve8_i5aVQ">
+    <attributes xmi:id="_niimdgzdEeir9ve8_i5aVQ" name="GLBL BUY GROUP KEY" description="For each unique Gbl Buy Grp, a unique system key is generated for the  record" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_niimdwzdEeir9ve8_i5aVQ" name="GLBL BUY GROUP ID" description="The unique Id assigned by MDM" label="" dataType="NCHAR(8)" required="true"/>
+    <attributes xmi:id="_niimeAzdEeir9ve8_i5aVQ" name="ROW RCVD DT" description="The date this data was last updated from the staging layer" label="" dataType="DATE" defaultValue="NULL"/>
+    <attributes xmi:id="_niimeQzdEeir9ve8_i5aVQ" name="GLBL BUY GROUP NM" description="The Gbl Buy Grp name  assigned in MDM" label="" dataType="NVARCHAR(268)" defaultValue="NULL"/>
+    <attributes xmi:id="_niimegzdEeir9ve8_i5aVQ" name="GLBL BUY GROUP ALT NM" description="The Gbl Buy Grp alternate name assigned in MDM" label="" dataType="NVARCHAR(268)" defaultValue="NULL"/>
+    <attributes xmi:id="_niimewzdEeir9ve8_i5aVQ" name="SCRTY CLASS CD" description="The security class for this site â REG, SEN, MAS" label="" dataType="NCHAR(4)" defaultValue="NULL"/>
+    <attributes xmi:id="_niimfAzdEeir9ve8_i5aVQ" name="INACTV DT" description="Inactive date" label="" dataType="DATE" defaultValue="NULL"/>
+    <attributes xmi:id="_niimfQzdEeir9ve8_i5aVQ" name="CLNT ASSGNMT IND" description="Indicates if a client is assigned" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <attributes xmi:id="_niimfgzdEeir9ve8_i5aVQ" name="GLBL BUY GROUP INDSTRY CD" description="GBL BUY GRP Industry code based on largest revenue by industry (RELEA  SE 4.1)" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <attributes xmi:id="_niimfwzdEeir9ve8_i5aVQ" name="PREDOM INDSTRY PCT" description="Predominate Industry percentage expressed in whole number shows the p  ercentage of revenue in the industry  (RELEASE 4.1)" label="" dataType="INTEGER" defaultValue="NULL"/>
+    <attributes xmi:id="_niimgAzdEeir9ve8_i5aVQ" name="CRET TYPE CD" description="" label="" dataType="NCHAR(10)" required="true"/>
+    <attributes xmi:id="_niimgQzdEeir9ve8_i5aVQ" name="CLNT ACTV IND" description="" label="" dataType="NCHAR(1)" defaultValue="Y" required="true"/>
+    <attributes xmi:id="_niimggzdEeir9ve8_i5aVQ" name="CLNT EMPTY IND" description="" label="" dataType="NCHAR(1)" defaultValue="N" required="true"/>
+    <attributes xmi:id="_niimgwzdEeir9ve8_i5aVQ" name="CISF LD TMS" description="The system load timestamp in CISF" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_niimhAzdEeir9ve8_i5aVQ" name="SIW LD TMS" description="The system timestamp when the row was loaded in SIW" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_niimhQzdEeir9ve8_i5aVQ" name="INSTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_niimhgzdEeir9ve8_i5aVQ" name="UPDTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_niimhwzdEeir9ve8_i5aVQ" name="ROW STAT CD" description="" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_niimiAzdEeir9ve8_i5aVQ" name="GLOBAL BUY GROUP_PK" attributes="_niimdgzdEeir9ve8_i5aVQ"/>
+    <keys xsi:type="LogicalDataModel:AlternateKey" xmi:id="_niimiQzdEeir9ve8_i5aVQ" name="GLOBAL BUY GROUP_AK" description="" attributes="_niimdgzdEeir9ve8_i5aVQ" physicalOption="UNIQUE_INDEX"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_nijNYAzdEeir9ve8_i5aVQ" name="GLOBAL CLIENT" description="The GLBL_CLNT (Global Client) table defines the client                 at a global (or international) level.  Domestic Clients                 are related to the Global Client by linking on the GLBL_CLNT_KEY.       The source is the CLIENT.GBL_CLIENT in CISF." label="Client" abbreviation="GLOBAL_CLIENT" package="_ng_HIAzdEeir9ve8_i5aVQ">
+    <attributes xmi:id="_nijNYQzdEeir9ve8_i5aVQ" name="GLBL CLNT KEY" description="For each unique Gbl Client, a unique system key is generated for the   record" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nijNYgzdEeir9ve8_i5aVQ" name="GLBL ULTMT CLNT KEY" description="For each unique Gbl Ult Client, a unique system key is generated for   the record" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nijNYwzdEeir9ve8_i5aVQ" name="GLBL CLNT ID" description="The unique Id assigned by MDM" label="" dataType="NCHAR(8)" required="true"/>
+    <attributes xmi:id="_nijNZAzdEeir9ve8_i5aVQ" name="ROW RCVD DT" description="The date this data was last updated from the staging layer" label="" dataType="DATE" defaultValue="NULL"/>
+    <attributes xmi:id="_nijNZQzdEeir9ve8_i5aVQ" name="GLBL CLNT NM" description="The Gbl Client name assigned in MDM" label="" dataType="NVARCHAR(268)" defaultValue="NULL"/>
+    <attributes xmi:id="_nijNZgzdEeir9ve8_i5aVQ" name="GLBL CLNT ALT NM" description="The Gbl Client alternate name assigned in MDM" label="" dataType="NVARCHAR(268)" defaultValue="NULL"/>
+    <attributes xmi:id="_nijNZwzdEeir9ve8_i5aVQ" name="SCRTY CLASS CD" description="The security class for this site â REG, SEN, MAS" label="" dataType="NCHAR(4)" defaultValue="NULL"/>
+    <attributes xmi:id="_nijNaAzdEeir9ve8_i5aVQ" name="INACTV DT" description="Inactive date" label="" dataType="DATE" defaultValue="NULL"/>
+    <attributes xmi:id="_nijNaQzdEeir9ve8_i5aVQ" name="CLNT ASSGNMT IND" description="Indicates if a client is assigned" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <attributes xmi:id="_nijNagzdEeir9ve8_i5aVQ" name="GLBL CLNT INDSTRY CD" description="Gbl Client Industry code based on largest revenue by industry (RELEAS  E 4.1)" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <attributes xmi:id="_nijNawzdEeir9ve8_i5aVQ" name="PREDOM INDSTRY PCT" description="Predominate Industry percentage expressed in whole number shows the p  ercentage of revenue in the industry  (RELEASE 4.1)" label="" dataType="INTEGER" defaultValue="NULL"/>
+    <attributes xmi:id="_nijNbAzdEeir9ve8_i5aVQ" name="GLBL BUY GROUP KEY" description="" label="" dataType="INTEGER" defaultValue="NULL"/>
+    <attributes xmi:id="_nijNbQzdEeir9ve8_i5aVQ" name="CRET TYPE CD" description="" label="" dataType="NCHAR(10)" required="true"/>
+    <attributes xmi:id="_nijNbgzdEeir9ve8_i5aVQ" name="CLNT ACTV IND" description="" label="" dataType="NCHAR(1)" defaultValue="Y" required="true"/>
+    <attributes xmi:id="_nijNbwzdEeir9ve8_i5aVQ" name="CLNT EMPTY IND" description="" label="" dataType="NCHAR(1)" defaultValue="N" required="true"/>
+    <attributes xmi:id="_nijNcAzdEeir9ve8_i5aVQ" name="CISF LD TMS" description="The system load timestamp in CISF" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_nijNcQzdEeir9ve8_i5aVQ" name="SIW LD TMS" description="The system timestamp when the row was loaded in SIW" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_nijNcgzdEeir9ve8_i5aVQ" name="INSTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nijNcwzdEeir9ve8_i5aVQ" name="UPDTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nijNdAzdEeir9ve8_i5aVQ" name="ROW STAT CD" description="" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_nijNdQzdEeir9ve8_i5aVQ" name="GLOBAL CLIENT_PK" attributes="_nijNYQzdEeir9ve8_i5aVQ"/>
+    <keys xsi:type="LogicalDataModel:AlternateKey" xmi:id="_nijNdgzdEeir9ve8_i5aVQ" name="GLOBAL CLIENT_AK" description="" attributes="_nijNYQzdEeir9ve8_i5aVQ" physicalOption="UNIQUE_INDEX"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_nij0cAzdEeir9ve8_i5aVQ" name="ISO COUNTRY" description="The ISO_CTRY (ISO Country) table contains the informati                on for the landed country code.  The source of this table is the        CUST.SAP_DIM_ISO_COUNTRY table in CISF." label="Client" abbreviation="ISO_COUNTRY" package="_ng_HIAzdEeir9ve8_i5aVQ">
+    <attributes xmi:id="_nij0cQzdEeir9ve8_i5aVQ" name="ISO CTRY KEY" description="For each unique SAP CUSTOMER Dimension, a unique system key is genera  ted for the record" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nij0cgzdEeir9ve8_i5aVQ" name="ISO CTRY CD" description="The 2 digit ISO Country code of the CMR (Landing)" label="" dataType="NCHAR(3)" required="true"/>
+    <attributes xmi:id="_nij0cwzdEeir9ve8_i5aVQ" name="ISO CTRY NM" description="The country name" label="" dataType="NVARCHAR(25)" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0dAzdEeir9ve8_i5aVQ" name="IMT CD" description="The IMT Code assigned to this country." label="" dataType="NCHAR(2)" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0dQzdEeir9ve8_i5aVQ" name="IMT NM" description="The name of the IMT" label="" dataType="NCHAR(20)" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0dgzdEeir9ve8_i5aVQ" name="IOT CD" description="The IOT Code assigned to this country" label="" dataType="NCHAR(2)" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0dwzdEeir9ve8_i5aVQ" name="IOT NM" description="The name of the IOT" label="" dataType="NVARCHAR(20)" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0eAzdEeir9ve8_i5aVQ" name="CISF LD TMS" description="The system timestamp when the row was loaded in CISF" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_nij0eQzdEeir9ve8_i5aVQ" name="SIW LD TMS" description="The system timestamp when the row was loaded in SIW" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_nij0egzdEeir9ve8_i5aVQ" name="INSTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0ewzdEeir9ve8_i5aVQ" name="UPDTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0fAzdEeir9ve8_i5aVQ" name="ROW STAT CD" description="" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_nij0fQzdEeir9ve8_i5aVQ" name="ISO COUNTRY_PK" attributes="_nij0cQzdEeir9ve8_i5aVQ"/>
+    <keys xsi:type="LogicalDataModel:AlternateKey" xmi:id="_nij0fgzdEeir9ve8_i5aVQ" name="ISO COUNTRY_AK" description="" attributes="_nij0cQzdEeir9ve8_i5aVQ" physicalOption="UNIQUE_INDEX"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_nij0fwzdEeir9ve8_i5aVQ" name="ORGANIZATION" description="" label="Client" abbreviation="ORGANIZATION" package="_ng_HIAzdEeir9ve8_i5aVQ">
+    <attributes xmi:id="_nij0gAzdEeir9ve8_i5aVQ" name="ORG KEY" description="" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nij0gQzdEeir9ve8_i5aVQ" name="PRTY TYPE CD" description="Literal value set to âORGâ" label="" dataType="NCHAR(4)" required="true"/>
+    <attributes xmi:id="_nij0ggzdEeir9ve8_i5aVQ" name="ORG PRTY ID" description="The Org Party ID" label="" dataType="NCHAR(10)" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0gwzdEeir9ve8_i5aVQ" name="PRNT ORG PRTY ID" description="The Parent Org ID" label="" dataType="NCHAR(10)" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0hAzdEeir9ve8_i5aVQ" name="ROW RCVD DT" description="The date the data was received in the CISF staging area" label="" dataType="DATE" required="true"/>
+    <attributes xmi:id="_nij0hQzdEeir9ve8_i5aVQ" name="LANG CD" description="The primary Language Code for this record" label="" dataType="NCHAR(2)" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0hgzdEeir9ve8_i5aVQ" name="LANG DESC" description="The primary language Code description" label="" dataType="NVARCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0hwzdEeir9ve8_i5aVQ" name="ORG TYPE CD" description="" label="" dataType="NCHAR(2)" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0iAzdEeir9ve8_i5aVQ" name="ORG TYPE DESC" description="" label="" dataType="NVARCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0iQzdEeir9ve8_i5aVQ" name="ORG LGL TYPE CD" description="" label="" dataType="NCHAR(3)" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0igzdEeir9ve8_i5aVQ" name="ORG LGL TYPE DESC" description="" label="" dataType="NVARCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0iwzdEeir9ve8_i5aVQ" name="ORG OWNG TYPE CD" description="" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0jAzdEeir9ve8_i5aVQ" name="ORG OWNG TYPE DESC" description="" label="" dataType="NVARCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0jQzdEeir9ve8_i5aVQ" name="ORG UNIQ REF NUM" description="The Unique Reference Number for the Org set in CCMS" label="" dataType="NCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0jgzdEeir9ve8_i5aVQ" name="CLNT CUST IND" description="&lt;Y> if the record has CMR´s or has been selected by Blue Harmony" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0jwzdEeir9ve8_i5aVQ" name="BUS CTRY CD" description="" label="" dataType="NCHAR(2)" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0kAzdEeir9ve8_i5aVQ" name="BUS CTRY DESC" description="" label="" dataType="NVARCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0kQzdEeir9ve8_i5aVQ" name="SCRTY CLASS CD" description="The security class for this org REG, SEN, MAS" label="" dataType="NCHAR(4)" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0kgzdEeir9ve8_i5aVQ" name="PRNT ORG PRTY KEY" description="" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nij0kwzdEeir9ve8_i5aVQ" name="MAIN SITE PRTY KEY" description="" label="" dataType="INTEGER" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0lAzdEeir9ve8_i5aVQ" name="CISF LD TMS" description="The system load timestamp in CISF" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_nij0lQzdEeir9ve8_i5aVQ" name="SIW LD TMS" description="The system timestamp when the row was loaded in SIW" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_nij0lgzdEeir9ve8_i5aVQ" name="INSTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0lwzdEeir9ve8_i5aVQ" name="UPDTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nij0mAzdEeir9ve8_i5aVQ" name="ROW STAT CD" description="" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_nij0mQzdEeir9ve8_i5aVQ" name="ORGANIZATION_PK" attributes="_nij0gAzdEeir9ve8_i5aVQ _nij0gQzdEeir9ve8_i5aVQ"/>
+    <keys xsi:type="LogicalDataModel:AlternateKey" xmi:id="_nij0mgzdEeir9ve8_i5aVQ" name="ORGANIZATION_AK" description="" attributes="_nij0gAzdEeir9ve8_i5aVQ _nij0gQzdEeir9ve8_i5aVQ" physicalOption="UNIQUE_INDEX"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_nikbgAzdEeir9ve8_i5aVQ" name="SIC CODE" description="" label="Client" abbreviation="SIC_CODE" package="_ng_HIAzdEeir9ve8_i5aVQ">
+    <attributes xmi:id="_nikbgQzdEeir9ve8_i5aVQ" name="SIC CD KEY" description="For each unique SAP CUSTOMER Dimension, a unique system key is genera  ted for the record. This is the SAP Dimension SIC Code Key." label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nikbggzdEeir9ve8_i5aVQ" name="UN SIC CD" description="The United Nations Standard Industry Classification code for this cus  tomer" label="" dataType="NCHAR(4)" required="true"/>
+    <attributes xmi:id="_nikbgwzdEeir9ve8_i5aVQ" name="UN SIC NM" description="The name for the UNSIC code value" label="" dataType="NVARCHAR(70)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbhAzdEeir9ve8_i5aVQ" name="INDSTRY CLASS CD" description="The IBM Internal industry class assigned to this UNSIC" label="" dataType="NCHAR(2)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbhQzdEeir9ve8_i5aVQ" name="INDSTRY CLASS NM" description="The Name of the industry class assigned to this UNSIC" label="" dataType="NVARCHAR(50)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbhgzdEeir9ve8_i5aVQ" name="INDSTRY CD" description="The IBM Internal single letter representation of the industry of this  customer" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbhwzdEeir9ve8_i5aVQ" name="INDSTRY NM" description="The name of the industry assigned to this UNSIC" label="" dataType="NVARCHAR(40)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbiAzdEeir9ve8_i5aVQ" name="ISU CD" description="The IBM Industry Solution Unit code assigned to this UNSIC" label="" dataType="NCHAR(2)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbiQzdEeir9ve8_i5aVQ" name="ISU NM" description="The name of the Industry Solution Unit code" label="" dataType="NVARCHAR(35)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbigzdEeir9ve8_i5aVQ" name="SCTR CD" description="The IBM assigned value for the sector that this UNISC rolls into" label="" dataType="NCHAR(4)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbiwzdEeir9ve8_i5aVQ" name="SCTR NM" description="The name of the sector assigned to the code" label="" dataType="NVARCHAR(35)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbjAzdEeir9ve8_i5aVQ" name="SIC SOURCE CD" description="" label="" dataType="NCHAR(4)" required="true"/>
+    <attributes xmi:id="_nikbjQzdEeir9ve8_i5aVQ" name="CISF LD TMS" description="The system timestamp when the row was loaded in CISF" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_nikbjgzdEeir9ve8_i5aVQ" name="SIW LD TMS" description="The system timestamp when the row was loaded in SIW" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_nikbjwzdEeir9ve8_i5aVQ" name="INSTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbkAzdEeir9ve8_i5aVQ" name="UPDTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbkQzdEeir9ve8_i5aVQ" name="ROW STAT CD" description="" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_nikbkgzdEeir9ve8_i5aVQ" name="SIC CODE_PK" attributes="_nikbgQzdEeir9ve8_i5aVQ"/>
+    <keys xsi:type="LogicalDataModel:AlternateKey" xmi:id="_nikbkwzdEeir9ve8_i5aVQ" name="SIC CODE_AK" description="" attributes="_nikbgQzdEeir9ve8_i5aVQ" physicalOption="UNIQUE_INDEX"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_nikblAzdEeir9ve8_i5aVQ" name="SITE" description="" label="Client" abbreviation="SITE" package="_ng_HIAzdEeir9ve8_i5aVQ">
+    <attributes xmi:id="_nikblQzdEeir9ve8_i5aVQ" name="SITE KEY" description="For each unique SITE, a unique system key is generated for the record  " label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nikblgzdEeir9ve8_i5aVQ" name="PRTY TYPE CD" description="Set to âSITEâ" label="" dataType="NCHAR(4)" required="true"/>
+    <attributes xmi:id="_nikblwzdEeir9ve8_i5aVQ" name="SITE PRTY ID" description="The CCMS Site Party Id" label="" dataType="NCHAR(10)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbmAzdEeir9ve8_i5aVQ" name="ORG KEY" description="For each unique ORG, a unique system key is generated for the record" label="" dataType="INTEGER" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbmQzdEeir9ve8_i5aVQ" name="DUNS KEY" description="For each unique DUNS, a unique system key is generated for the record  " label="" dataType="INTEGER" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbmgzdEeir9ve8_i5aVQ" name="ROW RCVD DT" description="The date the data was received by  CISF staging" label="" dataType="DATE" required="true"/>
+    <attributes xmi:id="_nikbmwzdEeir9ve8_i5aVQ" name="CIIS SITE ID" description="" label="" dataType="NCHAR(20)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbnAzdEeir9ve8_i5aVQ" name="LANG CD" description="The primary Language code for the site" label="" dataType="NCHAR(2)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbnQzdEeir9ve8_i5aVQ" name="LANG DESC" description="The language code description" label="" dataType="NVARCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbngzdEeir9ve8_i5aVQ" name="SITE TYPE CD" description="" label="" dataType="NCHAR(5)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbnwzdEeir9ve8_i5aVQ" name="SITE TYPE DESC" description="" label="" dataType="NVARCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikboAzdEeir9ve8_i5aVQ" name="SITE UNIQ REF NUM" description="The Unique Reference Number created in the CCMS system" label="" dataType="NCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikboQzdEeir9ve8_i5aVQ" name="MAIN SITE IND" description="âYâ if the site is considered a main site" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbogzdEeir9ve8_i5aVQ" name="HEADQTR IND" description="âYâ if the site is considered an HQ location" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbowzdEeir9ve8_i5aVQ" name="GENRL BUS CD" description="" label="" dataType="NCHAR(2)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbpAzdEeir9ve8_i5aVQ" name="GENRL BUS DESC" description="" label="" dataType="NVARCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbpQzdEeir9ve8_i5aVQ" name="SCRTY CLASS CD" description="The security class for this site â REG, SEN, MAS" label="" dataType="NCHAR(4)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbpgzdEeir9ve8_i5aVQ" name="GEO LOC CD" description="" label="" dataType="NCHAR(12)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbpwzdEeir9ve8_i5aVQ" name="GEO LOC KEY" description="" label="" dataType="INTEGER" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbqAzdEeir9ve8_i5aVQ" name="IBM CUST IND" description="" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbqQzdEeir9ve8_i5aVQ" name="UN SIC CD" description="" label="" dataType="NCHAR(4)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbqgzdEeir9ve8_i5aVQ" name="ISU CD" description="" label="" dataType="NCHAR(2)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbqwzdEeir9ve8_i5aVQ" name="INDSTRY CLASS CD" description="" label="" dataType="NCHAR(4)" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbrAzdEeir9ve8_i5aVQ" name="CISF LD TMS" description="The system load timestamp in CISF" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_nikbrQzdEeir9ve8_i5aVQ" name="SIW LD TMS" description="The system timestamp when the row was loaded in SIW" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_nikbrgzdEeir9ve8_i5aVQ" name="INSTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbrwzdEeir9ve8_i5aVQ" name="UPDTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nikbsAzdEeir9ve8_i5aVQ" name="ROW STAT CD" description="" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_nikbsQzdEeir9ve8_i5aVQ" name="SITE_PK" attributes="_nikblQzdEeir9ve8_i5aVQ _nikblgzdEeir9ve8_i5aVQ"/>
+    <keys xsi:type="LogicalDataModel:AlternateKey" xmi:id="_nikbsgzdEeir9ve8_i5aVQ" name="SITE_AK" description="" attributes="_nikblQzdEeir9ve8_i5aVQ _nikblgzdEeir9ve8_i5aVQ" physicalOption="UNIQUE_INDEX"/>
+  </LogicalDataModel:Entity>
+  <LogicalDataModel:Entity xmi:id="_nilCkAzdEeir9ve8_i5aVQ" name="SITE NAME" description="The SITE_NM (Site Name) table defines client names and                 identifies the language spoken at the client SITE.  The source is       from the CLIENT.SITE_NAME table in CISF." label="Client" abbreviation="SITE_NAME" package="_ng_HIAzdEeir9ve8_i5aVQ">
+    <attributes xmi:id="_nilCkQzdEeir9ve8_i5aVQ" name="SITE KEY" description="For each unique SITE, a unique system key is generated for the record  " label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nilCkgzdEeir9ve8_i5aVQ" name="ORG KEY" description="The unique key to join to the org table" label="" dataType="INTEGER" required="true"/>
+    <attributes xmi:id="_nilCkwzdEeir9ve8_i5aVQ" name="ROW RCVD DT" description="The date the data was received by the CISF Staging layer" label="" dataType="DATE" required="true"/>
+    <attributes xmi:id="_nilClAzdEeir9ve8_i5aVQ" name="MAIN SITE IND" description="âYâ if the site is considered the main site" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <attributes xmi:id="_nilClQzdEeir9ve8_i5aVQ" name="BUS LANG CD" description="Business Unit Language Code" label="" dataType="NCHAR(2)" defaultValue="NULL"/>
+    <attributes xmi:id="_nilClgzdEeir9ve8_i5aVQ" name="BUS LANG DESC" description="Business Unit Language code description" label="" dataType="NVARCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nilClwzdEeir9ve8_i5aVQ" name="BUS SUB LANG CD" description="Business Unit sub language code" label="" dataType="NCHAR(2)" defaultValue="NULL"/>
+    <attributes xmi:id="_nilCmAzdEeir9ve8_i5aVQ" name="BUS SUB LANG DESC" description="Business Unit sub language" label="" dataType="NVARCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nilCmQzdEeir9ve8_i5aVQ" name="BUS NM" description="Business Unit Name" label="" dataType="NVARCHAR(134)" defaultValue="NULL"/>
+    <attributes xmi:id="_nilCmgzdEeir9ve8_i5aVQ" name="LGL LANG CD" description="Legal Name language code" label="" dataType="NCHAR(2)" defaultValue="NULL"/>
+    <attributes xmi:id="_nilCmwzdEeir9ve8_i5aVQ" name="LGL LANG DESC" description="Legal Name language description" label="" dataType="NVARCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nilCnAzdEeir9ve8_i5aVQ" name="LGL SUB LANG CD" description="Legal Name sub language code" label="" dataType="NCHAR(2)" defaultValue="NULL"/>
+    <attributes xmi:id="_nilCnQzdEeir9ve8_i5aVQ" name="LGL SUB LANG DESC" description="Legal Name sub language description" label="" dataType="NVARCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nilCngzdEeir9ve8_i5aVQ" name="LGL NM" description="Legal Name" label="" dataType="NVARCHAR(134)" defaultValue="NULL"/>
+    <attributes xmi:id="_nilCnwzdEeir9ve8_i5aVQ" name="TRDSTL1 LANG CD" description="Tradestyle 1 language code" label="" dataType="NCHAR(2)" defaultValue="NULL"/>
+    <attributes xmi:id="_nilCoAzdEeir9ve8_i5aVQ" name="TRDSTL1 LANG DESC" description="Tradestyle 1 language code description" label="" dataType="NVARCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nilCoQzdEeir9ve8_i5aVQ" name="TRDSTL1 SUB LANG CD" description="Tradestyle 1 sub language code" label="" dataType="NCHAR(2)" defaultValue="NULL"/>
+    <attributes xmi:id="_nilCogzdEeir9ve8_i5aVQ" name="TRDSTL1 SUB LANG DESC" description="Tradestyle 1 language code description" label="" dataType="NVARCHAR(30)" defaultValue="NULL"/>
+    <attributes xmi:id="_nilCowzdEeir9ve8_i5aVQ" name="TRDSTL1 NM" description="Tradestyle 1 Name" label="" dataType="NVARCHAR(134)" defaultValue="NULL"/>
+    <attributes xmi:id="_nilCpAzdEeir9ve8_i5aVQ" name="CISF LD TMS" description="The system load timestamp in CISF" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_nilCpQzdEeir9ve8_i5aVQ" name="SIW LD TMS" description="The system timestamp when the row was loaded in SIW" label="" dataType="TIMESTAMP" required="true"/>
+    <attributes xmi:id="_nilCpgzdEeir9ve8_i5aVQ" name="INSTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nilCpwzdEeir9ve8_i5aVQ" name="UPDTD TMS" description="" label="" dataType="TIMESTAMP" defaultValue="NULL"/>
+    <attributes xmi:id="_nilCqAzdEeir9ve8_i5aVQ" name="ROW STAT CD" description="" label="" dataType="NCHAR(1)" defaultValue="NULL"/>
+    <keys xsi:type="LogicalDataModel:PrimaryKey" xmi:id="_nilCqQzdEeir9ve8_i5aVQ" name="SITE NAME_PK" attributes="_nilCkQzdEeir9ve8_i5aVQ"/>
+    <keys xsi:type="LogicalDataModel:AlternateKey" xmi:id="_nilCqgzdEeir9ve8_i5aVQ" name="SITE NAME_AK" description="" attributes="_nilCkQzdEeir9ve8_i5aVQ" physicalOption="UNIQUE_INDEX"/>
+  </LogicalDataModel:Entity>
+</xmi:XMI>
